@@ -11,14 +11,15 @@
   <body>
     <div class="container">
       <header>
-        <p><em>Szkielet — menu, Zamówienie z klasą active</em></p>
+        <h1>Lodziarnia Letnia</h1>
+        <!-- <p><em>Szkielet — menu, Zamówienie z klasą active</em></p> -->
+        <nav>
+          <ul>
+            <li><a href="./index.html">Start</a></li>
+            <li><a class="active" href="./zamowienie.html">Zamówienie</a></li>
+          </ul>
+        </nav>
       </header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Start</a></li>
-          <li><a href="./zamowienie.html">Zamówienie</a></li>
-        </ul>
-      </nav>
       <main>
         <p>Formularz: #smak, #ilosc, #oblicz, wynik w #wynik</p>
         <h2>Oblicz cenę</h2>
@@ -29,7 +30,7 @@
             <option value="6">Czekoladowy 6zł</option>
           </select>
           <label>Ilość: <input type="number" name="ilosc" id="ilosc" min="1" max="5" value="1"></label>
-          <input type="button" value="Oblicz" id="oblicz">
+          <br><input type="button" value="Oblicz" id="oblicz">
         </form>
         <p>Do zapłaty: </p>
         <span id="wynik"></span>
@@ -43,7 +44,7 @@
         </ul>
       </aside>
       <footer>
-        <p>Ksawier, Gilner, 4Ti</p>
+        <p><span>Ksawier Gilner</span> 4Ti</p>
       </footer>
     </div>
   </body>

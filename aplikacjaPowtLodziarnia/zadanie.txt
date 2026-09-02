@@ -1,0 +1,114 @@
+POWTÓRKA P1 — Lodziarnia Letnia (bardzo proste, 2 podstrony)
+Czas pracy: ok. 45 min | Zakres: HTML, CSS, JavaScript, obróbka grafiki
+
+Przykładowe etapy pracy wysyłane do repozytorium (kolejność dowolna):
+1) struktura katalogów css/, js/, img/
+2) przygotowany obrazek lody_m.jpg
+3) informacje w głowie plików html (autor, tytuł, strona kodowa)
+4) nagłówek z menu na obu stronach (struktura HTML)
+5) główny blok pliku index.html (struktura HTML)
+6) główny blok pliku zamowienie.html — formularz (struktura HTML)
+7) panel boczny i stopka na obu stronach (struktura HTML)
+8) CSS układu, menu i kolorów
+9) skrypt JS
+
+Przygotuj odpowiednio zdjęcie, które wykorzystasz w pracy:
+1. lody.jpg (plik w katalogu pliki/)
+    - przeskaluj obraz tak, by jego szerokość wynosiła 250 px (zachowaj proporcje)
+    - nadaj nazwę lody_m.jpg gotowemu plikowi
+
+Przygotuj witrynę internetową jak na zrzutach.
+Witryna składa się z dwóch stron:
+- index.html
+- zamowienie.html
+Style stron zawarte są w pliku main.css w katalogu css, skrypty JS w pliku main.js w katalogu js.
+Strony powinny zawierać informacje o autorze, tytułach stron oraz dołączonych plikach ze stylami i skryptami.
+
+HTML
+
+Zawartość stron umieść w kontenerze.
+Obie strony składają się z 4 głównych sekcji (użyj odpowiednich elementów HTML5) umieszczonych w głównym kontenerze.
+
+W nagłówku pierwszego stopnia umieść tytuł strony: "Lodziarnia Letnia" (zachowaj wielkość liter w pliku HTML!!!)
+Obok umieść menu z odnośnikami do podstron (index.html i zamowienie.html)
+z tekstem: Start oraz Zamówienie.
+Na stronie index.html odnośnik Start ma klasę active, na stronie zamowienie.html — odnośnik Zamówienie.
+
+W panelu bocznym (aside) na obu stronach umieść:
+- nagłówek trzeciego stopnia: "Nasze smaki"
+- listę punktowaną z pozycjami:
+    Truskawkowy — 5 zł
+    Waniliowy — 4 zł
+    Czekoladowy — 6 zł
+
+W stopce strony w akapicie umieść Twoje imię, nazwisko i klasę.
+
+W pliku index.html umieść w głównej części (main):
+- nagłówek drugiego stopnia: "Witamy!"
+- akapit z tekstem: "Lato to najlepszy czas na domowe lody. Zapraszamy do naszej lodziarni!"
+- w odpowiednim elemencie obraz lody_m.jpg z tekstem alternatywnym: gałka lodów
+
+W pliku zamowienie.html umieść w głównej części (main):
+- nagłówek drugiego stopnia: "Oblicz cenę"
+- formularz (nie wysyła danych na serwer) z polami:
+    Lista rozwijalna "Smak:" (id smak) z opcjami:
+        Truskawkowy 5 zł (wartość 5)
+        Waniliowy 4 zł (wartość 4)
+        Czekoladowy 6 zł (wartość 6)
+    Etykieta "Ilość:" i pole liczbowe (type number, id ilosc, min 1, max 5, wartość 1)
+    Przycisk type="button" o treści "Oblicz" i id oblicz
+- akapit: tekst "Do zapłaty: " oraz span o id wynik (początkowo pusty)
+
+CSS
+
+Wykorzystując znane ci sposoby rozmieść elementy jak na zrzutach.
+Kolory użyte w dokumencie:
+hsl(330, 50%, 35%)
+hsl(200, 60%, 95%)
+hsl(45, 90%, 45%)
+
+Zmień czcionkę w dokumencie na bezszeryfową (Tahoma, Arial, Verdana lub dowolna bezszeryfowa).
+
+Kontener ma szerokość nie większą niż 900px i jest wyśrodkowany w oknie przeglądarki.
+
+Nagłówek strony (header)
+- wysokość ok. 90px
+- margines górny i dolny 1em
+- obramowanie dolne: linia ciągła 1px w kolorze hsl(330, 50%, 35%)
+- tytuł i menu obok siebie (np. flex)
+
+Menu nawigacyjne
+- odnośniki bez podkreślenia, zaokrąglone rogi, tło jasne
+- po najechaniu (:hover) i dla klasy .active — ciemne tło, jasny tekst
+
+Bloki main i aside
+- tło w kolorze hsl(200, 60%, 95%)
+- zaokrąglone rogi 1em
+- cień: 0 0 5px hsl(330, 50%, 35%)
+- main zajmuje ok. 60% szerokości kontenera, aside ok. 35%
+
+Przycisk #oblicz
+- tło hsl(330, 50%, 35%), jasny tekst, brak obramowania, zaokrąglone rogi, kursor wskaźnik
+
+Element #wynik
+- kolor hsl(45, 90%, 45%)
+- pogrubienie, większa czcionka (ok. 1.4em)
+
+Obraz na index.html — szerokość max. 250px
+
+Stopka (footer)
+- szerokość 100% kontenera, wysokość ok. 70px
+- obramowanie górne 1px w kolorze hsl(330, 50%, 35%)
+- imię i nazwisko w elemencie span — pogrubione, kolor hsl(45, 90%, 45%)
+
+RESZTA FORMATOWANIA ZGODNA ZE ZRZUTAMI EKRANU DOŁĄCZONYMI DO ZADANIA.
+
+SKRYPT
+
+Skrypt działa na stronie zamowienie.html.
+Po kliknięciu przycisku Oblicz:
+1. Odczytaj cenę jednostkową z wybranej opcji listy #smak (atrybut value).
+2. Odczytaj ilość z pola #ilosc.
+3. Jeśli ilość nie jest liczbą całkowitą z przedziału 1–5, w elemencie #wynik wyświetl tekst: Błędna ilość
+4. W przeciwnym razie oblicz kwotę (cena × ilość) i w #wynik wyświetl wynik z dokładnością do 2 miejsc po przecinku oraz jednostką zł (np. 12.00 zł).
+Strona nie może się przeładowywać po kliknięciu Oblicz.

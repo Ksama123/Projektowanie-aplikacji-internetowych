@@ -1,0 +1,17 @@
+/* Lodziarnia Letnia — uzupełnij style według zadanie.txt (menu, .active, :hover) */
+html{
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    max-width: 900px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header{
+    height: 90px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: hsl(330, 50%, 35%);
+}

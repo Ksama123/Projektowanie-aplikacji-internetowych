@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Twoje imię i nazwisko" />
+    <title>Oblicz cenę — Lodziarnia</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p><em>Szkielet — menu, Zamówienie z klasą active</em></p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Start</a></li>
+          <li><a href="./zamowienie.html">Zamówienie</a></li>
+        </ul>
+      </nav>
+      <main>
+        <p>Formularz: #smak, #ilosc, #oblicz, wynik w #wynik</p>
+        <h2>Oblicz cenę</h2>
+        <form>
+          <select name="smak" id="smak">
+            <option value="5">Truskawkowy 5zł</option>
+            <option value="4">Waniliowy 4zł</option>
+            <option value="6">Czekoladowy 6zł</option>
+          </select>
+          <label>Ilość: <input type="number" name="ilosc" id="ilosc" min="1" max="5" value="1"></label>
+          <input type="button" value="Oblicz" id="oblicz">
+        </form>
+        <p>Do zapłaty: </p>
+        <span id="wynik"></span>
+      </main>
+      <aside>
+        <h3>Nasze smaki</h3>
+        <ul>
+          <li>Truskawkowy - 5zł</li>
+          <li>Waniliowy - 4zł</li>
+          <li>Czekoladowy - 6zł</li>
+        </ul>
+      </aside>
+      <footer>
+        <p>Ksawier, Gilner, 4Ti</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zadanie 7</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer>
+      // 1. Stwórz zmienną globalną liczbaProduktow = 0
+      let liczbaProduktów = 0
+      // 2. Zdefiniuj funkcję wyprodukuj(), która zwiększa tę zmienną
+      function wyprodukuj(){
+        liczbaProduktów++
+        document.write("Wyprodukowano: " + liczbaProduktów + "<br>")
+      }
+      // 3. Wywołaj ją kilka razy
+    </script>
+  </head>
+  <body>
+    <h1>Zadanie 7: Zasięg Globalny</h1>
+    <p>Symulacja fabryki.</p>
+    <div class="wynik">
+        <script>
+          wyprodukuj()
+          wyprodukuj()
+          wyprodukuj()
+        </script>
+    </div>
+    <footer>
+        Ksawier Gilner 4Ti
+    </footer>
+  </body>
+</html>

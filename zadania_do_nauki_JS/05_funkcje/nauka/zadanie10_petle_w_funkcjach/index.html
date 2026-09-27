@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zadanie 10</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // KROK 1: Definicja funkcji
+      function drukujLinie(ilosc){
+        for(i = 1;i<=ilosc;i++){
+          document.write(" - ")
+          // document.write(i)
+        }
+        document.write("<br>")
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Zadanie 10: Pętle</h1>
+    <p>Generator linii.</p>
+    <div id="wynik">
+      <script>
+        // KROK 2: Wywołania funkcji
+        drukujLinie(10)
+        drukujLinie(50)
+        drukujLinie(5)
+      </script>
+    </div>
+    <footer>
+      <!-- Imię, nazwisko, klasa -->
+      Ksawier Gilner 4Ti
+    </footer>
+  </body>
+</html>

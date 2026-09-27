@@ -1,0 +1,23 @@
+body {
+  font-family: "Verdana", sans-serif;
+  background-color: #fafafa;
+  color: #444;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  color: #d35400; /* Inny kolor niż w zestawie 1 */
+  border-bottom: 2px solid #e67e22;
+}
+.wynik {
+  padding: 20px;
+  background-color: #fdf2e9;
+  border-left: 5px solid #d35400;
+  margin-top: 20px;
+  font-family: "Courier New", monospace; /* Czcionka maszynowa dla adresu */
+  font-size: 1.2em;
+}

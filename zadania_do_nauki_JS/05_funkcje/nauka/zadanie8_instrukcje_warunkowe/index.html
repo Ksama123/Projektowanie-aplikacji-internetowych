@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zadanie 8</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // KROK 1: Definicja funkcji
+      function wpuscNaImpreze(wiek){
+        if(wiek>=18)
+          document.write("Zapraszamy! Masz " + wiek + " lat <br>")
+        else
+          document.write("Niestety, wstęp od 18 lat <br>")
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Zadanie 8: Warunki</h1>
+    <p>Sprawdzanie wieku w funkcji.</p>
+    <div id="wynik">
+      <script>
+        // KROK 2: Wywołania funkcji
+        wpuscNaImpreze(15)
+        wpuscNaImpreze(18)
+        wpuscNaImpreze(25)
+      </script>
+    </div>
+    <footer>
+      <!-- Imię, nazwisko, klasa -->
+      Ksawier Gilner 4Ti
+    </footer>
+  </body>
+</html>

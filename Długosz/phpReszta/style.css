@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(94, 43, 104);
+    color: rgb(174, 209, 255);
+    display: flex;
+}
+div{
+    align-content: center;
+    background-color: #e01be0;
+}

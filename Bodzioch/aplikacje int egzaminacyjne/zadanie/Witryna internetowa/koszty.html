@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function oblicz(){
+            let szerokosc = document.getElementById("szerokosc").value;
+            let dlugosc = document.getElementById("dlugosc").value;
+            if(document.getElementById("laminowe").checked)
+                    cena = 12;
+            else if (document.getElementById("winylowe").checked)
+                cena = 14;
+            else
+                cena = 18;
+            let wynik = szerokosc * dlugosc * cena;
+            document.getElementById("wynik").innerHTML = wynik + "zł";        
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="../montaż_paneli.png" alt="firma usługowa">
+    </header>
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <form>
+            <label>Szerokość pomieszczenia [m] <input type="number" id="szerokosc"></label>
+            <label>Długość pomieszczenia [m] <input type="number" id="dlugosc"></label>
+            <p>Typ panelu</p>
+            <label><input type="radio" name="list" id="laminowe">Panele laminowe</label><br>
+            <label><input type="radio" name="list" id="winylowe">Panele Winylowe</label><br>
+            <label><input type="radio" name="list" id="deska">Deska podłogowa</label><br>
+            <input onclick="oblicz()" type="button" value="Oblicz" id="button">
+            <p id="wynik"></p>
+        </form>
+    </main>
+    <footer>
+        <h5>Autor strony: Ksawier Gilner</h5>
+    </footer>
+
+</body>
+</html>

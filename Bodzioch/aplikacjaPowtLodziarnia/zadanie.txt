@@ -112,4 +112,3 @@ Po kliknięciu przycisku Oblicz:
 3. Jeśli ilość nie jest liczbą całkowitą z przedziału 1–5, w elemencie #wynik wyświetl tekst: Błędna ilość
 4. W przeciwnym razie oblicz kwotę (cena × ilość) i w #wynik wyświetl wynik z dokładnością do 2 miejsc po przecinku oraz jednostką zł (np. 12.00 zł).
 Strona nie może się przeładowywać po kliknięciu Oblicz.
-nie

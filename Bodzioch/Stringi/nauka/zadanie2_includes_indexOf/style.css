@@ -1,0 +1,4 @@
+body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; color: #333; padding: 20px; }
+.card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+h2 { color: #2c3e50; margin-top: 0; }
+#wynik { white-space: pre-wrap; font-family: Consolas, 'Courier New', monospace; }

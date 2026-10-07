@@ -173,3 +173,14 @@ select user , max(age) from user group by user;
 
 
 select host, count(*) from user group by host;
+
+# zad9
+SELECT COUNT(DISTINCT rozklady.NR_PRZEDM) as "ilość przedmiotów janeczka" FROM pracownicy INNER JOIN rozklady on pracownicy.NR_PRAC = rozklady.NR_PRAC WHERE pracownicy.NAZWISKO = "JANECZEK";
+# zad10
+SELECT MAX(pracownicy.DATA_UR) FROM pracownicy INNER JOIN przedmioty ON przedmioty.NR_ODP_PRAC = pracownicy.NR_PRAC;
+# zad11
+SELECT MAX(sale.ROZM_SALI) FROM sale INNER JOIN rozklady on sale.NR_SALI = rozklady.NR_SALI WHERE rozklady.DZIEN = "PON" AND rozklady.GODZINA BETWEEN 12 AND 16;
+# zad12
+SELECT rozklady.NR_SALI, COUNT(DISTINCT rozklady.NR_PRZEDM) as "Ilość przedmiotów" FROM rozklady GROUP BY rozklady.NR_SALI;
+# zad13
+SELECT przedmioty.NAZWA_PRZEDM, round(AVG(oceny.OCENA),2) AS "Średnia" FROM przedmioty INNER JOIN oceny ON przedmioty.NR_PRZEDM = oceny.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM;

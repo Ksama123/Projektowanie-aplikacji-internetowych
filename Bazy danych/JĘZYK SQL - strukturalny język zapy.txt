@@ -162,3 +162,11 @@ select < {funkcja agregująca} nazwa kolumny from tabela where warunek order by 
 select user from users - lista uzytkownikow
 select count(user) from users - ilość wierszy
 select count(*) from users
+select max(age) from users - najwieksza wartosc na kolumne age
+select avg(age) from users - średnia wartosc w kolumnie
+
+funkcje agregujące łączą się często z grupowaniem
+
+select <kolumna1> , avg(kolumna2) from tabela group by <kolumna1>;
+
+select user , max(age) from user group by user;

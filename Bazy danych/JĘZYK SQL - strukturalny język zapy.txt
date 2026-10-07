@@ -170,3 +170,6 @@ funkcje agregujące łączą się często z grupowaniem
 select <kolumna1> , avg(kolumna2) from tabela group by <kolumna1>;
 
 select user , max(age) from user group by user;
+
+
+select host, count(*) from user group by host;

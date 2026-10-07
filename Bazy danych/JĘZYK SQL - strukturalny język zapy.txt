@@ -147,6 +147,18 @@ SELECT DISTINCT przedmioty.NAZWA_PRZEDM FROM przedmioty INNER JOIN oceny on prze
 #zad8 Podać nazwy przedmiotów i nazwy ich przedmiotów nadrzędnych.
 SELECT p1.NAZWA_PRZEDM as "Przedmioty", p2.NAZWA_PRZEDM as "Przedmioty nadrzędne" FROM przedmioty p1 INNER JOIN przedmioty p2 on p1.NAZWA_PRZEDM = p2.NAZWA_PRZEDM;
 
+Funkcje AGREGUJĄCE !!!!
+
+avg()
+min()
+max()
+count()
+sum()
+w () wpisujemy nazwę kolumny przetwarzanej przez funkcje
+w (*) dowolna kolumna głównie z count(*)
+select < {funkcja agregująca} nazwa kolumny from tabela where warunek order by kolumna sortowania
 
 
-
+select user from users - lista uzytkownikow
+select count(user) from users - ilość wierszy
+select count(*) from users

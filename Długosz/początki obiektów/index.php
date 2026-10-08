@@ -16,17 +16,20 @@
         function przedstawSie(){
             echo "Cześć. Jestem ".$this->marka." Mam na liczniku ".$this->licznik. " km.<br>";
         }
+        function cofaj($ile){
+            $this->licznik -= $ile;
+        }
     }
     $s1 = new Samochod;
     $s1->marka = "Toyota";
     $s1->licznik = 0;
-
     $s2 = new Samochod;
     $s2->marka = "Lamborghini";
     $s2->licznik = 0;
     $s1->przedstawSie();
     $s1->jedz(10);
     $s2->jedz(20);
+    $s2->cofaj(10);
     $s1->przedstawSie();
     $s2->przedstawSie();
     ?>

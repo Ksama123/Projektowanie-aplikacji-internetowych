@@ -184,3 +184,7 @@ SELECT MAX(sale.ROZM_SALI) FROM sale INNER JOIN rozklady on sale.NR_SALI = rozkl
 SELECT rozklady.NR_SALI, COUNT(DISTINCT rozklady.NR_PRZEDM) as "Ilość przedmiotów" FROM rozklady GROUP BY rozklady.NR_SALI;
 # zad13
 SELECT przedmioty.NAZWA_PRZEDM, round(AVG(oceny.OCENA),2) AS "Średnia" FROM przedmioty INNER JOIN oceny ON przedmioty.NR_PRZEDM = oceny.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM;
+#zad14
+SELECT DISTINCT pracownicy.NAZWISKO, COUNT(rozklady.NR_SALI) FROM pracownicy INNER JOIN przedmioty ON pracownicy.NR_PRAC = przedmioty.NR_ODP_PRAC INNER JOIN rozklady ON pracownicy.NR_PRAC = rozklady.NR_PRAC GROUP BY pracownicy.NR_PRAC;
+#zad15
+SELECT przedmioty.NAZWA_PRZEDM, COUNT(DISTINCT rozklady.NR_PRAC) FROM przedmioty INNER JOIN rozklady ON przedmioty.NR_PRZEDM = rozklady.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM #to jest dodatkowe HAVING COUNT(DISTINCT rozklady.NR_PRAC) >2;

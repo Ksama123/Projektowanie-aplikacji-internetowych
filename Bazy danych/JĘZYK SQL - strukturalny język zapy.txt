@@ -189,3 +189,5 @@ SELECT DISTINCT pracownicy.NAZWISKO, COUNT(rozklady.NR_SALI) FROM pracownicy INN
 #zad15
 SELECT przedmioty.NAZWA_PRZEDM, COUNT(DISTINCT rozklady.NR_PRAC) FROM przedmioty INNER JOIN rozklady ON przedmioty.NR_PRZEDM = rozklady.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM #to jest dodatkowe HAVING COUNT(DISTINCT rozklady.NR_PRAC) >2;
 #zad16
+SELECT pracownicy.NAZWISKO FROM pracownicy INNER JOIN rozklady ON pracownicy.NR_PRAC = rozklady.NR_PRAC WHERE rozklady.DZIEN = "PON" GROUP BY pracownicy.NR_PRAC HAVING COUNT(rozklady.DZIEN) > 1; 
+#zad17

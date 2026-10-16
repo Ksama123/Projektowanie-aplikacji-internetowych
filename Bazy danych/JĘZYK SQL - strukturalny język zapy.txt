@@ -192,3 +192,8 @@ SELECT przedmioty.NAZWA_PRZEDM, COUNT(DISTINCT rozklady.NR_PRAC) FROM przedmioty
 SELECT pracownicy.NAZWISKO FROM pracownicy INNER JOIN rozklady ON pracownicy.NR_PRAC = rozklady.NR_PRAC WHERE rozklady.DZIEN = "PON" GROUP BY pracownicy.NR_PRAC HAVING COUNT(rozklady.DZIEN) > 1; 
 #zad17
 SELECT przedmioty.NAZWA_PRZEDM FROM przedmioty INNER JOIN rozklady ON przedmioty.NR_PRZEDM = rozklady.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM HAVING COUNT(DISTINCT rozklady.NR_SALI) > 1;
+#Przykład
+SELECT * FROM (SELECT * FROM studenci WHERE studenci.PLEC = 'K') AS kobiety WHERE kobiety.DATA_UR < (SELECT studenci.DATA_UR FROM studenci WHERE studenci.NAZWISKO = "NOWAK") HAVING COUNT(studenci.NR_KIER) = (SELECT...);
+#zad18
+SELECT przedmioty.NAZWA_PRZEDM FROM przedmioty INNER JOIN pracownicy ON przedmioty.NR_ODP_PRAC = pracownicy.NR_PRAC WHERE pracownicy.DATA_UR > (SELECT pracownicy.DATA_UR FROM pracownicy WHERE pracownicy.NAZWISKO = "JANECZEK");
+#zad19

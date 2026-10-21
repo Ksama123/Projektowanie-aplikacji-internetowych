@@ -200,3 +200,16 @@ SELECT przedmioty.NAZWA_PRZEDM FROM przedmioty INNER JOIN pracownicy ON przedmio
 SELECT pracownicy.NAZWISKO FROM pracownicy INNER JOIN wyplaty ON pracownicy.NR_PRAC = wyplaty.NR_PRAC GROUP BY pracownicy.NR_PRAC HAVING AVG(wyplaty.KWOTA) < (SELECT AVG(wyplaty.KWOTA) FROM wyplaty INNER JOIN pracownicy ON pracownicy.NR_PRAC = wyplaty.NR_PRAC WHERE pracownicy.NAZWISKO = "MISIURA");
 #zad20
 SELECT przedmioty.NAZWA_PRZEDM FROM pracownicy INNER JOIN rozklady ON pracownicy.NR_PRAC = rozklady.NR_PRAC INNER JOIN przedmioty ON przedmioty.NR_PRZEDM = rozklady.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM HAVING COUNT(DISTINCT pracownicy.NR_ZESP) > (SELECT COUNT(DISTINCT pracownicy.NR_ZESP) FROM pracownicy INNER JOIN rozklady ON pracownicy.NR_PRAC = rozklady.NR_PRAC INNER JOIN przedmioty ON przedmioty.NR_PRZEDM = rozklady.NR_PRZEDM WHERE przedmioty.NAZWA_PRZEDM = "ALGEBRA");
+
+#zad1
+SELECT oceny.NR_PRZEDM FROM oceny GROUP BY oceny.NR_PRZEDM HAVING AVG(oceny.OCENA) > 3.5 ORDER BY AVG(oceny.OCENA) DESC;
+#zad2
+SELECT oceny.NR_PRZEDM FROM oceny WHERE oceny.TERMIN = 1 GROUP BY oceny.NR_PRZEDM HAVING COUNT(oceny.OCENA) > 3 && AVG(oceny.OCENA) > 3.0 ORDER BY oceny.NR_PRZEDM;
+#zad3
+SELECT przedmioty.NAZWA_PRZEDM FROM przedmioty INNER JOIN oceny ON przedmioty.NR_PRZEDM = oceny.NR_PRZEDM GROUP BY przedmioty.NR_PRZEDM HAVING AVG(oceny.OCENA) > (SELECT AVG(oceny.OCENA) FROM oceny) && COUNT(DISTINCT oceny.NR_STUD)>4 ORDER BY przedmioty.NAZWA_PRZEDM;
+#zad1
+SELECT wyplaty.NR_PRAC FROM wyplaty GROUP BY wyplaty.NR_PRAC HAVING SUM(wyplaty.KWOTA) > 5000 ORDER BY SUM(wyplaty.KWOTA) DESC;
+#zad2
+SELECT wyplaty.NR_PRAC FROM wyplaty WHERE wyplaty.DATA_NALICZ > "1985-12-31" GROUP BY wyplaty.NR_PRAC HAVING COUNT(wyplaty.ID_WYPL)>2 && AVG(wyplaty.KWOTA) >400 ORDER BY wyplaty.NR_PRAC;
+#zad3
+SELECT pracownicy.NAZWISKO FROM pracownicy INNER JOIN wyplaty ON pracownicy.NR_PRAC = wyplaty.NR_PRAC GROUP BY pracownicy.NR_PRAC HAVING SUM(wyplaty.KWOTA) > (SELECT AVG(wyplaty.KWOTA) FROM wyplaty) ORDER BY pracownicy.NAZWISKO;

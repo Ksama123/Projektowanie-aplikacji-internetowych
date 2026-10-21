@@ -213,3 +213,9 @@ SELECT wyplaty.NR_PRAC FROM wyplaty GROUP BY wyplaty.NR_PRAC HAVING SUM(wyplaty.
 SELECT wyplaty.NR_PRAC FROM wyplaty WHERE wyplaty.DATA_NALICZ > "1985-12-31" GROUP BY wyplaty.NR_PRAC HAVING COUNT(wyplaty.ID_WYPL)>2 && AVG(wyplaty.KWOTA) >400 ORDER BY wyplaty.NR_PRAC;
 #zad3
 SELECT pracownicy.NAZWISKO FROM pracownicy INNER JOIN wyplaty ON pracownicy.NR_PRAC = wyplaty.NR_PRAC GROUP BY pracownicy.NR_PRAC HAVING SUM(wyplaty.KWOTA) > (SELECT AVG(wyplaty.KWOTA) FROM wyplaty) ORDER BY pracownicy.NAZWISKO;
+#zad1
+SELECT przydzialy.KOD_FUNKCJI FROM przydzialy GROUP BY przydzialy.KOD_FUNKCJI HAVING COUNT(DISTINCT przydzialy.NR_TEM)>10 ORDER BY COUNT(DISTINCT przydzialy.NR_TEM) DESC;
+#zad2
+SELECT przydzialy.KOD_FUNKCJI FROM przydzialy WHERE przydzialy.NR_TEM < 100 GROUP BY przydzialy.KOD_FUNKCJI HAVING COUNT(DISTINCT przydzialy.NR_PRAC) >5 ORDER BY przydzialy.KOD_FUNKCJI;
+#zad3
+SELECT funkcje.NAZWA_FUNKCJI, przydzialy.NR_TEM FROM funkcje INNER JOIN przydzialy ON funkcje.KOD_FUNKCJI = przydzialy.KOD_FUNKCJI WHERE przydzialy.NR_TEM in (SELECT tematy.NR_TEM FROM tematy INNER JOIN pracownicy ON pracownicy.NR_PRAC = tematy.NR_PRAC_KT WHERE pracownicy.NAZWISKO = "WILK");

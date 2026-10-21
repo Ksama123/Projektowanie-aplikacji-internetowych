@@ -11,7 +11,11 @@
         protected $opis;
         abstract function pole();
     }
-    class Kwadrat extends Figura{
+    interface Ruchome{
+        function ruch();
+
+    }
+    class Kwadrat extends Figura implements Ruchome{
         private $a;
         function __construct($a){
             $this->a = $a;
@@ -19,8 +23,12 @@
         function pole(){
             return $this->a ** 2;
         }
+        function ruch(){
+            echo "Rucham się<br>";
+        }
     }
     $f1 = new Kwadrat(3);
+    $f1->ruch();
     echo $f1->pole();
     ?>
 </body>

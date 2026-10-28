@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  color: #38bdf8;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+main {
+  flex: 1;
+}
+
+.karta-kalkulatora {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+}
+
+.karta-kalkulatora h2 {
+  font-size: 1.25rem;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+.wynik {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #334155;
+  padding-top: 1rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}

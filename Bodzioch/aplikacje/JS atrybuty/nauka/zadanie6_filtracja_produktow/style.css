@@ -1,0 +1,91 @@
+﻿﻿body {
+  font-family: "Arial", sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #006064;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #b2ebf2;
+  border-radius: 8px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #00acc1;
+  border-radius: 4px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #00838f;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.product p {
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Klasa do ukrywania elementu */
+.hidden {
+  display: none;
+}
+
+footer { margin-top: 30px; text-align: center; font-size: 0.9em; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }

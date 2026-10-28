@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ksawier Gilner 4Ti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 3: Profil Użytkownika</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+      <div class="header">
+        <h2>Mój Profil</h2>
+        <img
+          src="https://placehold.co/100x100/333/fff?text=User"
+          alt="Avatar"
+          class="avatar"
+        />
+      </div>
+
+      <form id="profile-form">
+        <div class="form-group">
+          <label for="name">Imię:</label>
+          <!-- Input zablokowany -->
+          <input type="text" id="name" value="Jan" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="surname">Nazwisko:</label>
+          <!-- Input zablokowany -->
+          <input type="text" id="surname" value="Kowalski" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <!-- Input zablokowany -->
+          <input
+            type="email"
+            id="email"
+            value="jan.kowalski@example.com"
+            disabled
+          />
+        </div>
+      </form>
+
+      <button id="edit-btn" class="btn">Edytuj Dane</button>
+    </div>
+    </main>
+
+    <footer>Ksawier Gilner 4Ti</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

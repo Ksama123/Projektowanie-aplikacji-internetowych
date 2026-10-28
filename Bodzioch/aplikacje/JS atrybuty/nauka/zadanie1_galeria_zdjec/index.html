@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ksawier Gilner 4Ti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 1: Galeria</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <main class="container">
+      <h1>Wybierz obrazek</h1>
+
+      <div class="gallery-view">
+        <!-- Główny obrazek - ten atrybut src będziemy zmieniać -->
+        <img
+          id="main-image"
+          src="https://placehold.co/600x400/orange/white?text=Obraz+Startowy"
+          alt="Wybrany obrazek"
+        />
+      </div>
+
+      <div class="controls">
+        <!-- Przyciski z danymi w atrybucie data-src -->
+        <button
+          class="btn"
+          data-src="https://placehold.co/600x400/007bff/white?text=Niebieski"
+        >
+          Niebieski
+        </button>
+        <button
+          class="btn"
+          data-src="https://placehold.co/600x400/28a745/white?text=Zielony"
+        >
+          Zielony
+        </button>
+        <button
+          class="btn"
+          data-src="https://placehold.co/600x400/dc3545/white?text=Czerwony"
+        >
+          Czerwony
+        </button>
+      </div>
+    </main>
+
+    <footer>Ksawier Gilner 4Ti</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

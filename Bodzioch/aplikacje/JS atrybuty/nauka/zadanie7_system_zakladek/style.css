@@ -1,0 +1,79 @@
+﻿body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.tabs-container {
+  width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  background-color: #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Styl aktywnej zakładki — klasa albo aria-selected (bez classList) */
+.tab-btn.active,
+.tab-btn[aria-selected="true"] {
+  background-color: white;
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+.tabs-body {
+  padding: 20px;
+  min-height: 200px;
+}
+
+.tab-content {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer { margin-top: 30px; text-align: center; font-size: 0.9em; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }

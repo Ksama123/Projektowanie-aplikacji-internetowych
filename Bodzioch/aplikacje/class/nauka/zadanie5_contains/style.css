@@ -1,0 +1,48 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #fce4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border: 2px solid #e91e63;
+  background-color: transparent;
+  color: #e91e63;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: rgba(233, 30, 99, 0.1);
+}
+
+/* Klasa aktywna */
+.liked {
+  background-color: #e91e63;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
+
+.liked:hover {
+  background-color: #d81b60;
+}

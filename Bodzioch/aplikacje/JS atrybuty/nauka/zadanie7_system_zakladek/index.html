@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="author" content="Imię Nazwisko klasa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 7: Zakładki</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <main class="container">
+      <div class="tabs-container">
+      <!-- Pasek zakładek -->
+      <div class="tabs-header" role="tablist">
+        <button
+          class="tab-btn active"
+          data-target="tab1"
+          aria-selected="true"
+          role="tab"
+        >
+          O Nas
+        </button>
+        <button
+          class="tab-btn"
+          data-target="tab2"
+          aria-selected="false"
+          role="tab"
+        >
+          Oferta
+        </button>
+        <button
+          class="tab-btn"
+          data-target="tab3"
+          aria-selected="false"
+          role="tab"
+        >
+          Kontakt
+        </button>
+      </div>
+
+      <!-- Treść zakładek -->
+      <div class="tabs-body">
+        <div id="tab1" class="tab-content" role="tabpanel">
+          <h2>Kim jesteśmy?</h2>
+          <p>
+            Jesteśmy firmą technologiczną z wieloletnim doświadczeniem. Tworzymy
+            nowoczesne rozwiązania dla biznesu.
+          </p>
+          <img
+            src="https://placehold.co/400x200/222/fff?text=O+Nas"
+            alt="O nas"
+          />
+        </div>
+
+        <div id="tab2" class="tab-content" hidden role="tabpanel">
+          <h2>Nasza Oferta</h2>
+          <ul>
+            <li>Tworzenie stron WWW</li>
+            <li>Marketing internetowy</li>
+            <li>Wsparcie IT</li>
+          </ul>
+          <img
+            src="https://placehold.co/400x200/444/fff?text=Oferta"
+            alt="Oferta"
+          />
+        </div>
+
+        <div id="tab3" class="tab-content" hidden role="tabpanel">
+          <h2>Skontaktuj się</h2>
+          <p>Email: kontakt@firma.pl</p>
+          <p>Tel: 123 456 789</p>
+          <img
+            src="https://placehold.co/400x200/666/fff?text=Kontakt"
+            alt="Kontakt"
+          />
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <footer>Imię Nazwisko klasa</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Imię Nazwisko klasa">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 6: Sklep</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Sklep Elektronika</h1>
+
+      <div class="filter-controls">
+        <input
+          type="number"
+          id="budget"
+          placeholder="Twój max budżet (PLN)"
+          value="2000"
+        />
+        <button id="filter-btn">Filtruj</button>
+      </div>
+
+      <div class="products-grid">
+        <!-- Produkty z atrybutem data-price -->
+        <div class="product" data-price="3500">
+          <h3>Laptop Gamingowy</h3>
+          <p>Cena: 3500 PLN</p>
+        </div>
+
+        <div class="product" data-price="1200">
+          <h3>Smartfon Android</h3>
+          <p>Cena: 1200 PLN</p>
+        </div>
+
+        <div class="product" data-price="250">
+          <h3>Słuchawki BT</h3>
+          <p>Cena: 250 PLN</p>
+        </div>
+
+        <div class="product" data-price="5000">
+          <h3>Komputer PC PRO</h3>
+          <p>Cena: 5000 PLN</p>
+        </div>
+
+        <div class="product" data-price="800">
+          <h3>Tablet 10"</h3>
+          <p>Cena: 800 PLN</p>
+        </div>
+
+        <div class="product" data-price="150">
+          <h3>Mysz bezprzewodowa</h3>
+          <p>Cena: 150 PLN</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>Imię Nazwisko klasa</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ksawier Gilner">
+    <title>Atelier Glina</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Atelier Glina</h1>
+        <nav>
+            <a href="#wyroby">Wyroby</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#zapis">Zapis</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Usługi</h2>
+        <dl>
+            <dt>Kubek</dt>
+                <dd>od 45 zł</dd>
+            <dt>Miska</dt>
+                <dd>od 70 zł</dd>
+            <dt>Wazon</dt>
+                <dd>od 90 zł</dd>
+        </dl>
+        <h2 id="wyroby">Wyroby</h2>
+        <div class="grid">
+        <figure>
+            <img src="https://picsum.photos/310/260?random=1" alt="random1">
+            <figcaption>
+                <h3>Kubek kamionkowy</h3>
+                <p>Kubek toczony ręcznie, szkiwiany</p>    
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/310/260?random=2" alt="random2">
+            <figcaption>
+                <h3>Miska na owoce</h3>
+                <p>Szeroka miska stołowa</p>    
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/310/260?random=3" alt="random3">
+            <figcaption>
+                <h3>Wazon wysoki</h3>
+                <p>Wazon na kwiaty cięte</p>
+            </figcaption>
+        </figure>
+        </div>
+        <h2 id="cennik">Cennik</h2>
+        <table>
+            <tr>
+                <th>Wyrób</th>
+                <th>Wypał</th>
+                <th>Cena</th>
+            </tr>
+            <tr>
+                <td>Kubek</td>
+                <td>2dni</td>
+                <td>45 zł</td>
+            </tr>
+            <tr>
+                <td>Miska</td>
+                <td>3dni</td>
+                <td>70 zł</td>
+            </tr>
+            <tr>
+                <td>Wazon</td>
+                <td>4dni</td>
+                <td>90 zł</td>
+            </tr>
+        </table>
+        <h2 id="zapis">Zapisz się na wypał</h2>
+        <form>
+            <label>Imię <input type="text" id="imie"></label><br>
+            <label>E-mail  <input type="email" id="email"></label><br>
+            <label>Wybór<select name="Wybór" id="select"><br>
+                <option value="kubek" data-cena="70">Kubek</option>
+                <option value="miska" data-cena="90">Miska</option>
+                <option value="wazon" data-cena="45">Wazon</option>
+            </select></label><br>
+            <input type="submit" value="Zapisz się na wypał" id="submit">
+        </form>
+        <p id="wynik"></p>
+    </main>
+    <footer>
+        <p>Ksawier Gilner 4Ti</p>
+    </footer>
+</body>
+</html>

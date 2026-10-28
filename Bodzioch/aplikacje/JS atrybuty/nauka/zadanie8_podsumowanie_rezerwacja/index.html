@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Imię Nazwisko klasa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka – rezerwacja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Rezerwacja seansu</h1>
+        <form id="formularz">
+            <label for="termin">Termin:</label>
+            <select id="termin">
+                <option value="">— wybierz —</option>
+                <option value="rano" data-cena="25 zł">Poranek</option>
+                <option value="popoludnie" data-cena="35 zł">Popołudnie</option>
+                <option value="wieczor" data-cena="45 zł">Wieczór</option>
+            </select>
+            <p>Cena: <span id="cena">Wybierz termin.</span></p>
+            <label>
+                <input type="checkbox" id="regulamin">
+                Akceptuję regulamin
+            </label>
+            <p>
+                <button type="button" id="rezerwuj" disabled>Rezerwuj</button>
+            </p>
+        </form>
+        <p id="status"></p>
+    </main>
+    <footer>Imię Nazwisko klasa</footer>
+    <script src="script.js"></script>
+</body>
+</html>

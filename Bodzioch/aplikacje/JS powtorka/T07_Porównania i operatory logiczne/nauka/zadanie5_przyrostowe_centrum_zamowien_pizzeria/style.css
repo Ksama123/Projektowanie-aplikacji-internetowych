@@ -1,0 +1,79 @@
+/* Jasna paleta portalu Capstone (#f1f5f9 / #ffffff / #2563eb) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #e2e8f0;
+    text-align: center;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    color: #2563eb;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+main {
+    flex: 1;
+    max-width: 720px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.karta {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.karta h2 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.wynik {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #1e293b;
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    padding: 1rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}

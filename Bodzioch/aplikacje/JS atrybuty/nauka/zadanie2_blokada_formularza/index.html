@@ -1,0 +1,35 @@
+﻿﻿<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ksawier Gilner 4Ti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 2: Blokada przycisków</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <main class="container">
+      <h1>Zatwierdź Zgłoszenie</h1>
+
+      <div class="message-box">
+        <p>Aby wysłać zgłoszenie, musisz najpierw odblokować formularz.</p>
+      </div>
+
+      <div class="actions">
+        <!-- Ten przycisk jest domyślnie zablokowany -->
+        <button id="submit-btn" class="btn btn-primary" disabled>
+          WYŚLIJ ZGŁOSZENIE
+        </button>
+
+        <!-- Ten przycisk służy do akcji odblokowania -->
+        <button id="unlock-btn" class="btn btn-secondary">
+          Odblokuj wysyłanie
+        </button>
+      </div>
+    </main>
+
+    <footer>Ksawier Gilner 4Ti</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

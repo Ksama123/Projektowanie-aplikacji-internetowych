@@ -14,12 +14,12 @@
     $conn = mysqli_connect($servername, $username, $password/*,$dbname*/);
     mysqli_select_db($conn, $dbname);
     // var_dump($conn);
-    $sql = "SELECT osoby.nazwisko, osoby.imię FROM `osoby`;";
+    $sql = "SELECT osoby.nazwisko, osoby.imię FROM `osoby` ORDER BY osoby.nazwisko,osoby.imię;";
     $result = mysqli_query($conn,$sql);
     // var_dump($result);
     if(mysqli_num_rows($result)>0){
         while($row = mysqli_fetch_assoc($result)){
-            echo $row["nazwisko"]." ".$row["imię"]."<br>";
+            echo $row["imię"]." ".$row["nazwisko"]."<br>";
         }
     }else
         echo "Nic nie znaleziono";

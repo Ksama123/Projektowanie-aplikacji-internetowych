@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #2563eb;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #1d4ed8;
+}
+
+main {
+  flex: 1;
+}
+
+.karta {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 720px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.karta h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+#wynik {
+  white-space: pre-wrap;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  background-color: #f8fafc;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #0f172a;
+  min-height: 120px;
+  font-size: 0.95rem;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+}

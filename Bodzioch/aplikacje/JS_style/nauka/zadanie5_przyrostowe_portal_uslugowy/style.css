@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 24px;
+}
+
+.naglowek-aplikacji {
+    text-align: center;
+    margin-bottom: 24px;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.naglowek-aplikacji h1 {
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.kontener-glowny {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.panel-kontrolny,
+.panel-podgladu {
+    flex: 1;
+    min-width: 320px;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.panel-kontrolny h2,
+.panel-podgladu h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 8px;
+    color: #94a3b8;
+}
+
+.grupa-formularza {
+    margin-bottom: 18px;
+}
+
+.grupa-formularza label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    cursor: pointer;
+    background: none;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-reset {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px;
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-reset:hover {
+    background-color: #0369a1;
+}
+
+.karta-uslugi {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 24px;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    opacity: 1.0;
+    transition: background-color 0.15s ease, border-radius 0.15s ease, opacity 0.15s ease;
+}
+
+.tytul-uslugi {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ffffff;
+    transition: font-size 0.15s ease;
+}
+
+.opis-uslugi {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+}
+
+.parametry-pakietu {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.etykieta-tag {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.komunikat-statusu {
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #38bdf8;
+    border-left: 3px solid #38bdf8;
+}
+
+.stopka-aplikacji {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #64748b;
+}

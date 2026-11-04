@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDetailing Studio — Przyciemnianie i Powłoki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="naglowek-aplikacji">
+        <h1>AutoDetailing Studio — Symulator Przyciemniania i Powłok</h1>
+        <p>Precyzyjna konfiguracja przepuszczalności światła i powłok ochronnych</p>
+    </header>
+
+    <main class="kontener-glowny">
+        <section class="panel-kontrolny">
+            <h2>Konfiguracja szyb</h2>
+
+            <div class="grupa-formularza">
+                <label for="suwak-krycie">Stopień przepuszczalności światła (0.10 do 1.00):</label>
+                <input type="range" id="suwak-krycie" min="0.10" max="1.00" step="0.05" value="1.00">
+                <span id="etykieta-krycia" class="etykieta-stanu">Aktualna przejrzystość powłoki: 100% (Fabryczna)</span>
+            </div>
+
+            <div class="grupa-przyciskow">
+                <button type="button" id="btn-filtr" class="btn-akcja">Zastosuj filtr ceramiczny</button>
+                <button type="button" id="btn-reset" class="btn-reset">Przywróć stan fabryczny pojazdu</button>
+            </div>
+        </section>
+
+        <section class="panel-podgladu">
+            <h2>Stan szyby pojazdu</h2>
+            <div class="tlo-pojazdu">
+                <div id="szyba-podglad" class="szyba-element">
+                    <p class="podpis-szyby">Szyba atermiczna z certyfikatem homologacji</p>
+                    <span class="oznaczenie-bezpieczenstwa">E20 43R-001248</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="stopka-aplikacji">
+        <p>Warsztat AutoDetailing Pro — Narzędzie Kontroli Homologacji</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

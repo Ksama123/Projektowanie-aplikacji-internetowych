@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufaktura Rowerowa VeloCity — Konfigurator Ramy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="naglowek-aplikacji">
+        <h1>Manufaktura Rowerowa VeloCity — Konfigurator Ramy</h1>
+        <p>Model: VeloCity Urban Classic 28 cali — Personalizacja wizualna</p>
+    </header>
+
+    <main class="kontener-glowny">
+        <section class="panel-kontrolny">
+            <h2>Panel parametrów</h2>
+
+            <div class="grupa-formularza">
+                <label for="kolor-ramy">Kolor lakieru ramy:</label>
+                <input type="color" id="kolor-ramy" value="#0284c7">
+                <span id="podsumowanie-kolor" class="etykieta-info">Kolor ramy: #0284c7 (Błękit miejski)</span>
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="suwak-profil">Grubość profilu ramy (2px – 12px):</label>
+                <input type="range" id="suwak-profil" min="2" max="12" value="4">
+                <span id="podsumowanie-profil" class="etykieta-info">Grubość ramy: 4px</span>
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="suwak-polysk">Stopień przezroczystości powłoki (0.2 – 1.0):</label>
+                <input type="range" id="suwak-polysk" min="0.2" max="1.0" step="0.05" value="1.0">
+                <span id="podsumowanie-polysk" class="etykieta-info">Połysk lakieru: 100%</span>
+            </div>
+
+            <button type="button" id="btn-reset-rower" class="btn-reset">Przywróć konfigurację fabryczną</button>
+        </section>
+
+        <section class="panel-podgladu">
+            <h2>Wizualizacja roweru</h2>
+            <div class="obszar-roweru">
+                <div id="karta-rower" class="karta-roweru">
+                    <h3 class="nazwa-modelu">VeloCity Urban Classic 28"</h3>
+                    <p class="opis-wersji">Rama aluminiowa hydroformowana, napęd paskowy</p>
+                    <div class="akcent-ramy"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="stopka-aplikacji">
+        <p>Manufaktura Rowerowa VeloCity — Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

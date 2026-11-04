@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Druku Cyfrowego — Konfigurator Wizytówki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="naglowek-aplikacji">
+        <h1>Studio Druku Cyfrowego — Konfigurator Wizytówki</h1>
+        <p>Drukarnia Cyfrowa PixelArt Studio — Dostosuj parametry typograficzne</p>
+    </header>
+
+    <main class="kontener-glowny">
+        <section class="panel-kontrolny">
+            <h2>Parametry typograficzne</h2>
+            
+            <div class="grupa-formularza">
+                <label for="suwak-font">Wielkość czcionki (12px – 32px):</label>
+                <input type="range" id="suwak-font" min="12" max="32" value="18">
+                <span id="wartosc-font" class="etykieta-wartosci">Rozmiar czcionki: 18px</span>
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="suwak-padding">Dopełnienie / padding (10px – 40px):</label>
+                <input type="range" id="suwak-padding" min="10" max="40" value="20">
+                <span id="wartosc-padding" class="etykieta-wartosci">Dopełnienie (padding): 20px</span>
+            </div>
+        </section>
+
+        <section class="panel-podgladu">
+            <h2>Podgląd wydruku</h2>
+            <div class="obszar-roboczy">
+                <div id="podglad-wizytowka" class="karta-wizytowki">
+                    <h3 class="imie-nazwisko">Jan Kowalski — Główny Architekt Systemów Web</h3>
+                    <p class="kontakt-dane">telefon: +48 600 700 800 | email: biuro@pixelart.pl</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="stopka-aplikacji">
+        <p>System Prepress PixelArt Studio — Podgląd w skali 1:1</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownia Tapicerska — Dobór Tkaniny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="naglowek-aplikacji">
+        <h1>Pracownia Tapicerska — Dobór Tkaniny Obiciowej</h1>
+        <p>Wybierz odcień tapicerki za pomocą próbnika lub gotowych wzorców</p>
+    </header>
+
+    <main class="kontener-glowny">
+        <section class="panel-kontrolny">
+            <h2>Wybór koloru</h2>
+            <div class="grupa-formularza">
+                <label for="probnik-kolor">Własny kolor z palety:</label>
+                <input type="color" id="probnik-kolor" value="#2563eb">
+            </div>
+
+            <div class="grupa-probek">
+                <p>Popularne odcienie:</p>
+                <div class="przyciski-probek">
+                    <button type="button" class="btn-odcien" data-kolor="#64748b">Szary welur</button>
+                    <button type="button" class="btn-odcien" data-kolor="#065f46">Butelkowa zieleń</button>
+                    <button type="button" class="btn-odcien" data-kolor="#d97706">Ciepły beż</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-podgladu">
+            <h2>Wizualizacja materiału</h2>
+            <div id="podglad-tkanina" class="karta-tkaniny">
+                <p class="podpis-wzorca">Wzorzec tkaniny tapicerskiej Premium</p>
+                <span id="etykieta-koloru" class="etykieta-kodu">Aktualny kolor tkaniny: #2563eb (Niebieski szafirowy)</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="stopka-aplikacji">
+        <p>System Konfiguracji Mebli — Moduł Tapicerski</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

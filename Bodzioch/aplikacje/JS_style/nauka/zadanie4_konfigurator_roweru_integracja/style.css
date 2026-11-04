@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 24px;
+}
+
+.naglowek-aplikacji {
+    text-align: center;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.naglowek-aplikacji h1 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.kontener-glowny {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.panel-kontrolny,
+.panel-podgladu {
+    flex: 1;
+    min-width: 320px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.panel-kontrolny h2,
+.panel-podgladu h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.grupa-formularza {
+    margin-bottom: 20px;
+}
+
+.grupa-formularza label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    background: none;
+    margin-bottom: 6px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.etykieta-info {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    background-color: #f8fafc;
+    border-left: 3px solid #0284c7;
+    padding: 4px 8px;
+}
+
+.btn-reset {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #475569;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-reset:hover {
+    background-color: #334155;
+}
+
+.obszar-roweru {
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 260px;
+}
+
+.karta-roweru {
+    width: 100%;
+    padding: 28px;
+    background-color: #0284c7;
+    color: #ffffff;
+    border: 4px solid #0369a1;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 1.0;
+    transition: background-color 0.15s ease, border-width 0.15s ease, opacity 0.15s ease;
+}
+
+.nazwa-modelu {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.opis-wersji {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.akcent-ramy {
+    margin-top: 16px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.stopka-aplikacji {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #64748b;
+}

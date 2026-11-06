@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS Szkola_DB;
+USE szkola_db;
+CREATE TABLE klasy (id_klasy int PRIMARY KEY AUTO_INCREMENT, nazwa_klasy varchar(5));
+CREATE TABLE nauczyciele( id_nauczyciela INT PRIMARY KEY AUTO_INCREMENT, imie VARCHAR(25) NOT NULL, nazwisko VARCHAR(30) NOT NULL COMMENT "Nazwisko nauczyciela", INDEX(nazwisko) );
+CREATE TABLE uczniowie( id_ucznia INT PRIMARY KEY AUTO_INCREMENT, imie VARCHAR(20) NOT NULL, nazwisko VARCHAR(30) NOT NULL, data_urodzenia DATE, id_klasy INT, FOREIGN KEY(id_klasy) REFERENCES klasy(id_klasy) #N DELETE SET NULL ON UPDATE SET NULL );
+CREATE TABLE przedmioty( id_przedmiotu INT PRIMARY KEY, nazwa_przedmiotu VARCHAR(30) UNIQUE, id_nauczyciela_prowadzacego INT, FOREIGN KEY(id_nauczyciela_prowadzacego) REFERENCES nauczyciele(id_nauczyciela) );
+CREATE TABLE kursy( kod_kursu INT PRIMARY KEY, nazwa VARCHAR(60) UNIQUE, cena DECIMAL(6, 2) DEFAULT 0.00 );
+CREATE TABLE oceny( id_ucznia INT, id_przedmiotu INT, ocena INT NOT NULL, data_wystawienia DATE, PRIMARY KEY(id_ucznia, id_przedmiotu), FOREIGN KEY(id_ucznia) REFERENCES uczniowie(id_ucznia), FOREIGN KEY(id_przedmiotu) REFERENCES przedmioty(id_przedmiotu) );
+CREATE TABLE profile_uczniow( id_ucznia INT PRIMARY KEY, adreswww VARCHAR(50), login VARCHAR(40) NOT NULL, haslo VARCHAR(50) NOT NULL, FOREIGN KEY(id_ucznia) REFERENCES uczniowie(id_ucznia) ON DELETE CASCADE );
+CREATE TABLE szkoly( id_szkoly INT, nazwa VARCHAR(50) );

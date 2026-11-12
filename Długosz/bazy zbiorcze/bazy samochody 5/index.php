@@ -35,6 +35,7 @@
     ?>
     <form action="#">
         <select name="marka" id="marka">
+            <option>Wszystkie</option>
             <?php
             $sql = "SELECT DISTINCT marka from samochody ORDER BY marka";
             $result = mysqli_query($conn,$sql);
@@ -47,7 +48,7 @@
         <input type="submit" value="Wybierz samochód">
     </form>
     <?php
-    if(isset($_GET['marka'])){
+    if((isset($_GET['marka']))&& $_GET['marka'] != "Wszystkie"){
         $marka = $_GET['marka'];
         // $sql = "SELECT * FROM samochody WHERE samochody.rok_produkcji='$rok' ORDER BY samochody.rok_produkcji;";
         $sql = "SELECT * FROM samochody WHERE samochody.marka='$marka' ORDER BY rok_produkcji";

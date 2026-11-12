@@ -40,8 +40,11 @@
             $sql = "SELECT DISTINCT marka from samochody ORDER BY marka";
             $result = mysqli_query($conn,$sql);
             while($row = mysqli_fetch_assoc($result)){
-            // var_dump($row);
-            echo "<option>{$row['marka']}</option>\n";
+                if (isset($_GET['marka' ]) && $_GET[ 'marka' ] == $row[ 'marka' ])
+                    echo "<option selected>{$row['marka']}</option>\n";
+                else
+                    echo "<option>{$row['marka']}</option>\n";
+                // echo "<option>{$row['marka']}</option>\n";
         }
             ?>
         </select>

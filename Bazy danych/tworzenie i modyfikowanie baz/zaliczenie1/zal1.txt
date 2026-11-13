@@ -1,0 +1,38 @@
+#zad 1
+CREATE DATABASE zoo;
+USE zoo;
+CREATE TABLE pracownik( nazwisko VARCHAR(20) NOT NULL, imie VARCHAR(20) NOT NULL, id INT PRIMARY KEY , placa DECIMAL(7, 2) );
+#zad 2
+RENAME TABLE pracownik TO opiekun;
+#zad 3
+ALTER TABLE opiekun ADD COLUMN data_zatrudnienia DATE NOT NULL;
+#zad 4
+ALTER TABLE opiekun DROP PRIMARY KEY;
+#zad 5
+ALTER TABLE opiekun DROP id;
+#zad 6
+ALTER TABLE opiekun ADD na_zwolnieniu BOOLEAN;
+#zad 7
+ALTER TABLE opiekun ADD COLUMN id_opiekuna int FIRST;
+#zad 8
+ALTER TABLE opiekun ADD PRIMARY KEY (id_opiekuna);
+#zad 9
+CREATE TABLE zwierze( nazwa VARCHAR(20) UNIQUE NOT NULL, gatunek VARCHAR(20) NOT NULL, rok_urodzenia YEAR NOT NULL, waga INT );
+#zad 10
+ALTER TABLE zwierze ADD zdjecie BLOB AFTER gatunek;
+#zad 11
+ALTER TABLE zwierze CHANGE rok_urodzenia rok_rejestracji YEAR NOT NULL;
+#zad 12
+ALTER TABLE zwierze ADD COLUMN id_opiekuna INT;
+#zad 13
+ALTER TABLE zwierze ADD FOREIGN KEY(id_opiekuna) REFERENCES opiekun(id_opiekuna);
+#zad 14
+CREATE TABLE klatka( nr_klatki INT PRIMARY KEY, nazwa VARCHAR(20) NOT NULL, typ INT NOT NULL, powierzchnia FLOAT, wysokosc FLOAT DEFAULT 2.5 );	
+#zad 15
+ALTER TABLE klatka MODIFY typ VARCHAR(20) AFTER wysokosc;
+#zad 16
+ALTER TABLE zwierze ADD COLUMN nr_klatki INT;
+#zad 17
+ALTER TABLE zwierze ADD FOREIGN KEY(nr_klatki) REFERENCES klatka(nr_klatki);
+#zad 18
+ALTER TABLE zwierze DROP FOREIGN KEY id_opiekuna;

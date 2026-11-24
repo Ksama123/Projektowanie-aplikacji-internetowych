@@ -47,9 +47,16 @@
         echo "Brak danych";
     else{
         echo "<table>\n";
-        echo "<tr><th>Data</th><th>Rodzaj</th><th>Gdzie</th><th>Drużyny</th><th>Sędzia</th><th>Wynik</th></tr>";
+        if(isset($druzyna))
+            echo "<tr><th>Data</th><th>Rodzaj</th><th>Gdzie</th><th>Sędzia</th><th>Wynik</th></tr>";
+        else
+            echo "<tr><th>Data</th><th>Rodzaj</th><th>Gdzie</th><th>Drużyny</th><th>Sędzia</th><th>Wynik</th></tr>";
         while($row = mysqli_fetch_assoc($result)){
-            echo "<tr><td>{$row['Data_meczu']}</td><td>{$row['Rodzaj_meczu']}</td><td>{$row['Gdzie']}</td><td>{$row['Nazwa']}</td><td>{$row['Imie']} {$row['Nazwisko']}</td><td>{$row['Bramki_zdobyte']}:{$row['Bramki_stracone']}</td>";
+            if(isset($druzyna))
+                echo "<tr><td>{$row['Data_meczu']}</td><td>{$row['Rodzaj_meczu']}</td><td>{$row['Gdzie']}</td><td>{$row['Imie']} {$row['Nazwisko']}</td><td>{$row['Bramki_zdobyte']}:{$row['Bramki_stracone']}</td>";
+            else
+                echo "<tr><td>{$row['Data_meczu']}</td><td>{$row['Rodzaj_meczu']}</td><td>{$row['Gdzie']}</td><td>{$row['Nazwa']}</td><td>{$row['Imie']} {$row['Nazwisko']}</td><td>{$row['Bramki_zdobyte']}:{$row['Bramki_stracone']}</td>";
+
         }
         echo "</table>";
     }

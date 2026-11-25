@@ -43,5 +43,3 @@ CREATE USER 'gosc2'@'%' identified BY 'haslo123';
 
 GRANT SELECT ON ti2_uczelnia.przedmioty TO 'gosc2'@'%';
 GRANT SELECT(nazwisko) ON ti2_uczelnia.pracownicy TO 'gosc2'@'%';
-
-

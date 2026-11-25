@@ -1,0 +1,47 @@
+usówanie roli /uzytkownika
+
+drop user <"nazwa">@<"host">
+drop role <"nazwa roli">
+
+zmiana właściwości konta/roli odbywa się przez zmianę zawartości odpowiednicj table w bazie MySQL np. tablea
+user
+
+zmiana hasla z poziomu konta root:
+set password for <"nazwa">@<"host"> =< "haslo">
+
+właczyć/wyłaczyć konto:
+alter user <"nazwa">@<"host"> account <lock|unlock>
+
+wymuszenie zmiany hasla po zalogowaniu przez uzytkownika:
+alter user <"nazwa">@<"host"> password expire ;
+
+Wymuszenie ilosci połaczeń lub ilości zapytań
+
+alter user <"nazwa">@<"host"> WITH
+MAX_QUERIES_PER_HOUR <ilosc>
+MAX_UPDATES_PER_HOUR <ilosc>
+MAX_CONNECTIONS_PER_HOUR <ilosc>
+MAX_USER_CONNECTIONS <ilosc>
+
+Uprawnienia MySQL określają jakie polecenia może wykonywac użytkownik :
+
+grant < uprawnienie > [<lista kolumn >] on <obiekt>
+uprawnienie - zestaw polecen które może wykonywać
+lista kolumn - kolumny w wybranym obiekcie do którego będzie przypisane uprawnienie
+obiekt - nazwa bazy lub tabeli/ widoku do której przypisujemy uprawnienie
+*.* - wszystkie obiekty w bazie
+uczelnia.* - wszystkie tabele w bazie uczelnia
+uczelnia.pracownicy - tylko tabela pracownicy
+użytkownik - podajemy nazwe i host 'tomek'@'%'
+
+create user 'uczen2'@'%' identified by 'haslo123'
+show grants for 'uczen2'@'%';
+grant select on ti2_uczelnia.* to 'uczen2'@'%';
+describe sale;
+show tables;
+CREATE USER 'gosc2'@'%' identified BY 'haslo123';
+
+GRANT SELECT ON ti2_uczelnia.przedmioty TO 'gosc2'@'%';
+GRANT SELECT(nazwisko) ON ti2_uczelnia.pracownicy TO 'gosc2'@'%';
+
+

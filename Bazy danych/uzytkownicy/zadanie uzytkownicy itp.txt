@@ -1,0 +1,46 @@
+Zadanie 3. Analiza ocen studentów
+
+1. Utwórz rolę:
+analityk_ocen2
+
+2. Utwórz widok:
+vw_oceny_studentow2
+
+zawierający:
+- NR_STUD
+- NAZWISKO
+- OCENA
+
+3. Nadaj roli prawo odczytu danych z widoku.
+
+4. Utwórz użytkownika:
+analityk2
+Hasło: Analityk123!
+
+5. Przypisz rolę użytkownikowi.
+
+
+CREATE role 'analityk_ocen2';
+CREATE OR REPLACE VIEW vw_oceny_studentow AS SELECT studenci.nr_stud AS "nr studenta" , nazwisko , ocena FROM oceny INNER JOIN studenci ON studenci.NR_STUD = oceny.NR_STUD;
+GRANT SELECT ON vw_oceny_studentow TO 'analityk_ocen2';
+CREATE USER 'analityk2'@'%' identified BY 'Analityk123!';
+GRANT 'analityk_ocen2' to 'analityk2'@'%';
+SET DEFAULT role analityk_ocen2 FOR 'analityk2'@'%';
+==============================================================================================================================================================================================================================================
+CREATE role kierownik_projektu2;
+CREATE VIEW vw_tematy AS SELECT NR_TEM, TEMAT, DATA_ROZP, DATA_ODB FROM tematy;
+GRANT SELECT ON vw_tematy TO kierownik_projektu2;
+GRANT SELECT ON przydzialy TO kierownik_projektu2;
+CREATE USER 'kierownik2'@'%' identified BY 'Kierownik123!';
+GRANT kierownik_projektu2 TO 'kierownik2'@'%';
+SET DEFAULT role kierownik_projektu2 FOR 'kierownik2'@'%';
+SHOW GRANTS FOR 'kierownik2'@'%';
+#REVOKE SELECT ON przydzialy FROM kierownik_projektu2;
+==============================================================================================================================================================================================================================================
+CREATE role finanse2;
+CREATE VIEW vw_wyplaty AS SELECT ID_WYPL, DATA_WYPL, KWOTA, NR_PRAC FROM wyplaty;
+GRANT SELECT ON vw_wyplaty TO finanse2;
+GRANT SELECT ON pracownicy TO finanse2;
+CREATE USER 'finansista2'@'%' identified BY 'Finanse123!';
+GRANT finanse2 TO 'finansista2'@'%';
+SET DEFAULT role finanse2 FOR 'finansista2'@'%';
